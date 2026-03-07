@@ -107,13 +107,17 @@
       "id": "1",
       "username": "admin",
       "password": "123",
-      "role": "ADMIN"
+      "role": "ADMIN",
+      "avatar": "https://img.goodfon.ru/wallpaper/big/c/c9/enot-vzgliad-voda-pogruzhenie-morda.webp"
+
     },
     {
       "id": "2",
       "username": "user",
       "password": "123",
-      "role": "USER"
+      "role": "USER",
+      "avatar": "https://img.goodfon.ru/wallpaper/big/c/c9/enot-vzgliad-voda-pogruzhenie-morda.webp"
+
     }
   ],
   "profile": {
