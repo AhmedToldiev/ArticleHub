@@ -1,11 +1,12 @@
 import { classNames } from 'shared/lib/classnames/classNames';
 import { DynamicModuleLoader, ReducersList } from 'shared/lib/DynamicModuleLoader/DynamicModuleLoader';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch';
-import { useCallback, useEffect } from 'react';
+import { useCallback } from 'react';
 import { useSelector } from 'react-redux';
 import { Text, TextTheme } from 'widgets/Text/Text';
 import { useTranslation } from 'react-i18next';
 import { useInititalEffect } from 'shared/lib/hooks/useInitialEffect';
+import { useParams } from 'react-router-dom';
 import {
     fetchProfileData, getProfileError, getProfileForm,
     getProfileIsLoading, getProfileReadonly, getProfileValidateErrors, profileActions, ProfileCard, profileReducer,
@@ -30,6 +31,7 @@ const ProfilePage = ({ className }: ProfilePageProps) => {
     const readonly = useSelector(getProfileReadonly);
     const validateErrors = useSelector(getProfileValidateErrors);
     const { t } = useTranslation('profile');
+    const { id } = useParams<{id: string}>();
 
     const validateErrorTranslates = {
         [ValidateProfileError.INCORRECT_USER_DATA]: t('Некорректные имя или фамилия'),
@@ -40,7 +42,9 @@ const ProfilePage = ({ className }: ProfilePageProps) => {
     };
 
     useInititalEffect(() => {
-        dispatch(fetchProfileData());
+        if (id) {
+            dispatch(fetchProfileData(id));
+        }
     });
 
     const onChangeFirstname = useCallback((value?: string) => {

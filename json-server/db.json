@@ -19,7 +19,9 @@
       "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
       "views": 1022,
       "createdAt": "24.02.2026",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -100,6 +102,24 @@
       "text": "some comment 3",
       "articleId": "1",
       "userId": "1"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "wewewe",
+      "id": "EAuh5R1"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "Ахьмад",
+      "id": "trosmk1"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "pl",
+      "id": "XjZ55cS"
     }
   ],
   "users": [
@@ -109,25 +129,37 @@
       "password": "123",
       "role": "ADMIN",
       "avatar": "https://img.goodfon.ru/wallpaper/big/c/c9/enot-vzgliad-voda-pogruzhenie-morda.webp"
-
     },
     {
       "id": "2",
       "username": "user",
       "password": "123",
       "role": "USER",
-      "avatar": "https://img.goodfon.ru/wallpaper/big/c/c9/enot-vzgliad-voda-pogruzhenie-morda.webp"
-
+      "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTO0_IKu_eccXQbCjL8olDFZFjrg6go2islZQ&s"
     }
   ],
-  "profile": {
-    "first": "Ahmed",
-    "last": "Toldiev",
-    "age": 22,
-    "currency": "RUB",
-    "country": "Russia",
-    "city": "Moscow",
-    "username": "admin",
-    "avatar": "https://img.goodfon.ru/wallpaper/big/c/c9/enot-vzgliad-voda-pogruzhenie-morda.webp"
-  }
+  "profile": [
+    {
+      "id": "1",
+      "first": "Ahmed",
+      "last": "Toldiev",
+      "age": 22,
+      "currency": "RUB",
+      "country": "Russia",
+      "city": "Moscow",
+      "username": "admin",
+      "avatar": "https://img.goodfon.ru/wallpaper/big/c/c9/enot-vzgliad-voda-pogruzhenie-morda.webp"
+    },
+    {
+      "id": "2",
+      "first": "Adam",
+      "last": "Smith",
+      "age": 22,
+      "currency": "RUB",
+      "country": "Russia",
+      "city": "Moscow",
+      "username": "Adam",
+      "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTO0_IKu_eccXQbCjL8olDFZFjrg6go2islZQ&s"
+    }
+  ]
 }
