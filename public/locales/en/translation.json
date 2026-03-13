@@ -22,5 +22,7 @@
     "Вы ввели неверный логин или пароль": "You entered an incorrect login or password",
     "Комментарии отсутствуют": "Comments are missing",
     "Отправить": "Send",
-    "Введите текст комментария": "Enter comment text"
+    "Введите текст комментария": "Enter comment text",
+    "Читать далее...": "Read more...",
+    "Назад к списку": "Back to list"
 }

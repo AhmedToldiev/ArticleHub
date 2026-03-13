@@ -16,11 +16,16 @@ const Template: ComponentStory<typeof ArticleDetails> = args => <ArticleDetails 
 const article: Article = {
     id: '1',
     title: 'Javascript news',
-    subtitle: 'Что нового в JS за 2022 год?',
+    subtitle: 'Что нового в JS за 2025 год?',
     img: 'https://teknotower.com/wp-content/uploads/2020/11/js.png',
     views: 1022,
     createdAt: '26.02.2022',
     type: [ArticleType.IT],
+    user: {
+        id: '1',
+        username: 'Ahmed',
+    },
+
     blocks: [
         {
             id: '1',
