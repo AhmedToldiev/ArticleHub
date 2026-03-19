@@ -24,7 +24,7 @@ describe('loginByUsername.test', () => {
         const userValue = { username: '123', id: '1' };
         mockedAxios.post.mockReturnValue(Promise.resolve({ data: userValue }));
         const action = loginByUsername({ username: '123', password: '123' });
-        const result = await action(dispatch, getState, { api: mockedAxios, navigate: jest.fn() });
+        const result = await action(dispatch, getState, { api: mockedAxios });
         console.log(result);
 
         expect(dispatch).toHaveBeenCalledWith(userActions.setAuthData(userValue));
@@ -37,7 +37,7 @@ describe('loginByUsername.test', () => {
     test('403 error', async () => {
         mockedAxios.post.mockReturnValue(Promise.resolve({ status: 403 }));
         const action = loginByUsername({ username: '123', password: '123' });
-        const result = await action(dispatch, getState, { api: mockedAxios, navigate: jest.fn() });
+        const result = await action(dispatch, getState, { api: mockedAxios });
 
         expect(mockedAxios.post).toHaveBeenCalled();
         expect(dispatch).toHaveBeenCalledTimes(2);
