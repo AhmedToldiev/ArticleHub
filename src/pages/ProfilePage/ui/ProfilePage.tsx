@@ -7,6 +7,7 @@ import { Text, TextTheme } from 'widgets/Text/Text';
 import { useTranslation } from 'react-i18next';
 import { useInititalEffect } from 'shared/lib/hooks/useInitialEffect';
 import { useParams } from 'react-router-dom';
+import { Page } from 'shared/ui/Page/Page';
 import {
     fetchProfileData, getProfileError, getProfileForm,
     getProfileIsLoading, getProfileReadonly, getProfileValidateErrors, profileActions, ProfileCard, profileReducer,
@@ -89,7 +90,7 @@ const ProfilePage = ({ className }: ProfilePageProps) => {
 
     return (
         <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
-            <div className={classNames('', {}, [className])}>
+            <Page className={classNames('', {}, [className])}>
                 <ProfilePageHeader />
                 {validateErrors?.length && validateErrors.map(err => (
                     <Text theme={TextTheme.ERROR} text={validateErrorTranslates[err]} key={err} />
@@ -108,7 +109,7 @@ const ProfilePage = ({ className }: ProfilePageProps) => {
                     onChangeCurrency={onChangeCurrency}
                     onChangeCountry={onChangeCountry}
                 />
-            </div>
+            </Page>
         </DynamicModuleLoader>
     );
 };

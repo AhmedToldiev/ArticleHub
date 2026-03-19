@@ -16,6 +16,7 @@ import { addCommentForArticle }
     from 'pages/ArticleDetailsPage/model/services/addCommentForArticle/addCommentForArticle';
 import { RoutePath } from 'shared/config/routeConfig/routerConfig';
 import { Button, ButtonTheme } from 'widgets/Button/Button';
+import { Page } from 'shared/ui/Page/Page';
 import { CommentList } from '../../../../entities/Comment';
 import { ArticleDetails } from '../../../../entities/Article';
 import cls from './ArticleDetailsPage.module.scss';
@@ -49,15 +50,15 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
 
     if (!id) {
         return (
-            <div className={classNames(cls.ArticleDetailsPage, {}, [className])}>
+            <Page className={classNames(cls.ArticleDetailsPage, {}, [className])}>
                 {t('Статья не найдена')}
-            </div>
+            </Page>
         );
     }
 
     return (
         <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
-            <div className={classNames(cls.ArticleDetailsPage, {}, [className])}>
+            <Page className={classNames(cls.ArticleDetailsPage, {}, [className])}>
                 <Button theme={ButtonTheme.OUTLINE} onClick={onBackToList}>
                     {t('Назад к списку')}
                 </Button>
@@ -68,7 +69,7 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
                     isLoading={isLoading}
                     comments={comments}
                 />
-            </div>
+            </Page>
         </DynamicModuleLoader>
     );
 };
