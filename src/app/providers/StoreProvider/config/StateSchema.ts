@@ -4,6 +4,7 @@ import { AxiosInstance } from 'axios';
 import { ArticleDetailsCommentsSchema } from 'pages/ArticleDetailsPage';
 import { AddCommentFormSchema } from 'features/addCommentForm';
 import { ArticlesPageSchema } from 'pages/ArticlesPage';
+import { UISchema } from 'features/UI';
 import { ArticleDetailsSchema } from '../../../../entities/Article';
 import { ProfileSchema } from '../../../../entities/Profile';
 import { ReducerManager } from './reducerManager';
@@ -11,6 +12,7 @@ import { UserSchema } from '../../../../entities/User';
 
 export interface StateSchema {
     user: UserSchema;
+    ui: UISchema;
 
     // Асинхронные редьюсеры
     loginForm?: LoginSchema

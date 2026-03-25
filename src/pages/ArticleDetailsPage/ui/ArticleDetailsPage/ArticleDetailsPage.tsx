@@ -16,7 +16,7 @@ import { addCommentForArticle }
     from 'pages/ArticleDetailsPage/model/services/addCommentForArticle/addCommentForArticle';
 import { RoutePath } from 'shared/config/routeConfig/routerConfig';
 import { Button, ButtonTheme } from 'widgets/Button/Button';
-import { Page } from 'shared/ui/Page/Page';
+import { Page } from 'widgets/Page/Page';
 import { CommentList } from '../../../../entities/Comment';
 import { ArticleDetails } from '../../../../entities/Article';
 import cls from './ArticleDetailsPage.module.scss';

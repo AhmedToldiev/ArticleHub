@@ -9,7 +9,7 @@ import { articlesPageActions, articlesPageReducer, getArticles } from
     'pages/ArticlesPage/model/slices/articlesPageSlice';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch';
 import { ArticleViewSelector } from 'features/ArticleViewSelector/ArticleViewSelector';
-import { Page } from 'shared/ui/Page/Page';
+import { Page } from 'widgets/Page/Page';
 import { fetchNextArticlesPage } from 'pages/ArticlesPage/model/services/fetchNextArticlesPage/fetchNextArticlesPage';
 import { initArticlesPage } from 'pages/ArticlesPage/model/services/initArticlePage/initArticlePage';
 import { ArticleView } from '../../../../entities/Article/model/types/article';
