@@ -4,6 +4,8 @@
     "Главная страница": "Main page",
     "Главная": "Main",
     "О сайте": "About us",
+    "Профиль": "Profile",
+    "Статьи": "Articles",
     "Язык": "English",
     "Страница не найдена": "Page not found",
     "Произошла непредвиденная ошибка": "An unexpected error has occurred",
@@ -24,5 +26,18 @@
     "Отправить": "Send",
     "Введите текст комментария": "Enter comment text",
     "Читать далее...": "Read more...",
-    "Назад к списку": "Back to list"
+    "Назад к списку": "Back to list",
+    "Показать комментарии": "Show comments",
+    "Сортировать ПО": "Sort by",
+    "по": "by",
+    "возрастанию": "ascending",
+    "убыванию": "descending",
+    "дате создания": "date of creation",
+    "названию": "name",
+    "просмотрам": "views",
+    "Все статьи": "All articles",
+    "Экономика": "Economy",
+    "Айти": "IT",
+    "Наука": "Science",
+    "Статьи не найдены": "Articles not found"
 }

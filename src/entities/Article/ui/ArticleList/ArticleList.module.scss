@@ -7,9 +7,5 @@
 .SMALL {
     display: flex;
     flex-wrap: wrap;
-
-    .card {
-        margin-right: 40px;
-        margin-bottom: 40px;
-    }
+    gap: 30px;
 }
