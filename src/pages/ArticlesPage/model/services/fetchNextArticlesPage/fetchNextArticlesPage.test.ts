@@ -1,6 +1,9 @@
+// src/pages/ArticlesPage/model/services/fetchNextArticlesPage/fetchNextArticlesPage.test.ts
+
 import { TestAsyncThunk } from 'shared/lib/tests/TestAsyncThunk/TestAsyncThunk';
 import { fetchNextArticlesPage } from './fetchNextArticlesPage';
 import { fetchArticlesList } from '../fetchArticlesList/fetchArticlesList';
+import { articlesPageActions } from '../../slices/articlesPageSlice';
 
 jest.mock('../fetchArticlesList/fetchArticlesList');
 
@@ -20,9 +23,11 @@ describe('fetchNextArticlesPage.test', () => {
         await thunk.callThunk();
 
         expect(thunk.dispatch).toBeCalledTimes(4);
-        expect(fetchArticlesList).toHaveBeenCalledWith({ page: 3 });
+        expect(fetchArticlesList).toHaveBeenCalledWith({});
+        expect(thunk.dispatch).toHaveBeenCalledWith(articlesPageActions.setPage(3));
     });
-    test('fetchAritcleList not called', async () => {
+
+    test('fetchArticlesList not called', async () => {
         const thunk = new TestAsyncThunk(fetchNextArticlesPage, {
             articlesPage: {
                 page: 2,
@@ -40,14 +45,14 @@ describe('fetchNextArticlesPage.test', () => {
         expect(fetchArticlesList).not.toHaveBeenCalled();
     });
 
-    test('fetchAritcleList not called when isLoading', async () => {
+    test('fetchArticlesList not called when isLoading', async () => {
         const thunk = new TestAsyncThunk(fetchNextArticlesPage, {
             articlesPage: {
                 page: 2,
                 ids: [],
                 entities: {},
                 limit: 5,
-                isLoading: true,
+                isLoading: true, // ← isLoading = true
                 hasMore: true,
             },
         });
