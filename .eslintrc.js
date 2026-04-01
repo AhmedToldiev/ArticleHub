@@ -43,9 +43,9 @@ module.exports = {
         'arrow-parens': ['error', 'as-needed'],
         'i18next/no-literal-string': [
             'error',
-            { markupOnly: true, ignoreAttribute: ['data-testid', 'to'] },
+            { markupOnly: true, ignoreAttribute: ['data-testid', 'to', 'target'] },
         ],
-        'max-len': ['error', { ignoreComments: true, code: 120 }],
+        'max-len': ['error', { ignoreComments: true, code: 125 }],
         'linebreak-style': ['error', 'unix'],
         'jsx-quotes': ['error', 'prefer-single'],
         'jsx-a11y/click-events-have-key-events': 'off',
@@ -59,6 +59,7 @@ module.exports = {
         'no-console': 'off',
         'no-undef': 'off',
         'react/no-array-index-key': 'off',
+        'arrow-body-style': 'off',
     },
     globals: {
         __IS_DEV__: true,
