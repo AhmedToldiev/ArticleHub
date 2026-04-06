@@ -43,7 +43,7 @@ module.exports = {
         'arrow-parens': ['error', 'as-needed'],
         'i18next/no-literal-string': [
             'error',
-            { markupOnly: true, ignoreAttribute: ['data-testid', 'to', 'target'] },
+            { markupOnly: true, ignoreAttribute: ['data-testid', 'to', 'target', 'direction', 'gap', 'align', 'justify'] },
         ],
         'max-len': ['error', { ignoreComments: true, code: 125 }],
         'linebreak-style': ['error', 'unix'],
@@ -60,6 +60,7 @@ module.exports = {
         'no-undef': 'off',
         'react/no-array-index-key': 'off',
         'arrow-body-style': 'off',
+    
     },
     globals: {
         __IS_DEV__: true,
