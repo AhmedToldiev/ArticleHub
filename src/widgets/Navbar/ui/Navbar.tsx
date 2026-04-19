@@ -5,6 +5,9 @@ import { Button, ButtonTheme } from 'widgets/Button/Button';
 import { memo, useCallback, useState } from 'react';
 import { LoginModal } from 'features/AuthByUsername';
 import { useDispatch, useSelector } from 'react-redux';
+import { Dropdown } from 'shared/ui/Dropdown/Dropdown';
+import { RoutePath } from 'shared/config/routeConfig/routerConfig';
+import { Avatar } from 'shared/ui/Avatar/Avatar';
 import { getUserAuthData, userActions } from '../../../entities/User';
 import cls from './Navbar.module.scss';
 
@@ -25,20 +28,28 @@ export const Navbar = memo(({ className }: NavbarProps) => {
         setIsAuthModal(true);
     }, []);
 
-    const onLogoutModal = useCallback(() => {
+    const onLogout = useCallback(() => {
         dispatch(userActions.logout());
     }, [dispatch]);
 
     if (authData) {
         return (
             <header className={classNames(cls.Navbar, {}, [className])}>
-                <Button
-                    theme={ButtonTheme.CLEAR_INVERTED}
-                    className={cls.links}
-                    onClick={onLogoutModal}
-                >
-                    {t('Выйти')}
-                </Button>
+                <Dropdown
+                    direction='bottom left'
+                    className={cls.dropdown}
+                    items={[
+                        {
+                            content: t('Профиль'),
+                            href: RoutePath.profile + authData.id,
+                        },
+                        {
+                            content: t('Выйти'),
+                            onClick: onLogout,
+                        },
+                    ]}
+                    trigger={<Avatar size={30} src={authData.avatar} />}
+                />
             </header>
         );
     }

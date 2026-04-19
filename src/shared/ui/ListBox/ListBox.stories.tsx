@@ -1,14 +1,18 @@
 import { useState } from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import { ThemeDecorator } from 'shared/config/storybook/decorators/ThemeDecorator';
-import { Theme } from 'app/providers/ThemeProvider';
 import { Currency } from '../../../entities/Currency/model/types/currency';
 import { ListBox } from './ListBox';
 
 export default {
     title: 'shared/ListBox',
     component: ListBox,
+    argTypes: {
+        backgroundColor: { control: 'color' },
+    },
+    decorators: [
+        Story => <div style={{ padding: 100 }}><Story /></div>,
+    ],
 } as ComponentMeta<typeof ListBox>;
 
 const items = [
@@ -34,26 +38,29 @@ const Template: ComponentStory<typeof ListBox> = args => {
 
 export const Normal = Template.bind({});
 Normal.args = {
-    value: Currency.RUB,
     items,
 };
 
-export const Dark = Template.bind({});
-Dark.args = {
-    value: Currency.RUB,
-    items: [
-        { value: Currency.RUB, content: Currency.RUB },
-        { value: Currency.EUR, content: Currency.EUR },
-        { value: Currency.USD, content: Currency.USD },
-    ],
-};
-
-Dark.decorators = [ThemeDecorator(Theme.DARK)];
-
-export const Orange = Template.bind({});
-Orange.args = {
-    value: Currency.RUB,
+export const TopLeft = Template.bind({});
+TopLeft.args = {
+    direction: 'top left',
     items,
 };
 
-Orange.decorators = [ThemeDecorator(Theme.ORANGE)];
+export const TopRight = Template.bind({});
+TopRight.args = {
+    direction: 'top right',
+    items,
+};
+
+export const BottomLeft = Template.bind({});
+BottomLeft.args = {
+    direction: 'bottom left',
+    items,
+};
+
+export const BottomRight = Template.bind({});
+BottomRight.args = {
+    direction: 'bottom right',
+    items,
+};
