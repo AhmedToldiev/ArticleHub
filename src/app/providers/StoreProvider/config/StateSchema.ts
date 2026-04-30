@@ -1,19 +1,20 @@
 import { EnhancedStore } from '@reduxjs/toolkit';
 import { LoginSchema } from 'features/AuthByUsername';
 import { AxiosInstance } from 'axios';
-import { ArticleDetailsCommentsSchema } from 'pages/ArticleDetailsPage';
 import { AddCommentFormSchema } from 'features/addCommentForm';
 import { ArticlesPageSchema } from 'pages/ArticlesPage';
 import { UISchema } from 'features/UI';
 import { ArticleDetailsPageSchema } from 'pages/ArticleDetailsPage/model/types';
+import { rtkApi } from 'shared/api/rtkApi';
+import { ProfileSchema } from 'features/editableProfileCard';
 import { ArticleDetailsSchema } from '../../../../entities/Article';
-import { ProfileSchema } from '../../../../entities/Profile';
 import { ReducerManager } from './reducerManager';
 import { UserSchema } from '../../../../entities/User';
 
 export interface StateSchema {
     user: UserSchema;
     ui: UISchema;
+    [rtkApi.reducerPath]: ReturnType<typeof rtkApi.reducer>,
 
     // Асинхронные редьюсеры
     loginForm?: LoginSchema

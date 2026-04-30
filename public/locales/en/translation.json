@@ -39,5 +39,12 @@
     "Экономика": "Economy",
     "Айти": "IT",
     "Наука": "Science",
-    "Статьи не найдены": "Articles not found"
+    "Статьи не найдены": "Articles not found",
+    "Рекомендуем": "Recommend",
+    "Ошибка при загрузке статей": "Error loading articles",
+    "Профиль не найден": "Profile not found",
+    "Серверная ошибка при сохранении": "Server error while saving",
+    "Некорректный регион": "Incorrect region",
+    "Данные не указаны": "Data not specified",
+    "Имя и фамилия обязательны": "First and last name are required"
 }

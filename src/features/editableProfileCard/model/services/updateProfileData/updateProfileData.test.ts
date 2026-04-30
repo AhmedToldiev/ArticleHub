@@ -1,8 +1,8 @@
 import { TestAsyncThunk } from 'shared/lib/tests/TestAsyncThunk/TestAsyncThunk';
-import { Country } from '../../../../Country/model/types/country';
-import { Currency } from '../../../../Currency/model/types/currency';
+import { Currency } from '../../../../../entities/Currency';
+import { Country } from '../../../../../entities/Country';
 import { updateProfileData } from './updateProfileData';
-import { ValidateProfileError } from '../../types/profile';
+import { ValidateProfileError } from '../../types/editableProfileCardSchema';
 
 const data = {
     username: 'admin',

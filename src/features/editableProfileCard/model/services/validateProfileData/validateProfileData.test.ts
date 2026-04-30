@@ -1,6 +1,6 @@
-import { Country } from '../../../../Country/model/types/country';
-import { Currency } from '../../../../Currency/model/types/currency';
-import { ValidateProfileError } from '../../types/profile';
+import { Currency } from '../../../../../entities/Currency';
+import { Country } from '../../../../../entities/Country';
+import { ValidateProfileError } from '../../types/editableProfileCardSchema';
 import { validateProfileData } from './validateProfileData';
 
 const data = {

@@ -1,18 +1,16 @@
-import { Country } from '../../../Country';
-import { Currency } from '../../../Currency';
-import {
-    profileActions, profileReducer,
-} from './profileSlice';
-import { ProfileSchema } from '../types/profile';
+import { Currency } from '../../../../entities/Currency';
+import { Country } from '../../../../entities/Country';
 import { updateProfileData } from '../services/updateProfileData/updateProfileData';
+import { ProfileSchema, ValidateProfileError } from '../types/editableProfileCardSchema';
+import { profileActions, profileReducer } from './profileSlice';
 
 const data = {
     username: 'admin',
     age: 22,
-    country: Country.Russia,
-    last: 'Toldiev',
-    first: 'Ahmed',
-    city: 'Moscow',
+    country: Country.Ukraine,
+    lastname: 'ulbi tv',
+    first: 'asd',
+    city: 'asf',
     currency: Currency.USD,
 };
 
@@ -55,6 +53,7 @@ describe('profileSlice.test', () => {
     test('test update profile service pending', () => {
         const state: DeepPartial<ProfileSchema> = {
             isLoading: false,
+            validateErrors: [ValidateProfileError.SERVER_ERROR],
         };
 
         expect(profileReducer(
@@ -66,7 +65,7 @@ describe('profileSlice.test', () => {
         });
     });
 
-    test('test update profile service fulfilled', () => {
+    test('test update profile service fullfiled', () => {
         const state: DeepPartial<ProfileSchema> = {
             isLoading: true,
         };
