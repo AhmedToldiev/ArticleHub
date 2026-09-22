@@ -46,5 +46,7 @@
     "Серверная ошибка при сохранении": "Server error while saving",
     "Некорректный регион": "Incorrect region",
     "Данные не указаны": "Data not specified",
-    "Имя и фамилия обязательны": "First and last name are required"
+    "Имя и фамилия обязательны": "First and last name are required",
+    "Админ панель": "Admin panel",
+    "Админка": "Admin"
 }

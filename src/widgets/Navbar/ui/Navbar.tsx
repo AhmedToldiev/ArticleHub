@@ -8,7 +8,9 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Dropdown } from 'shared/ui/Dropdown/Dropdown';
 import { RoutePath } from 'shared/config/routeConfig/routerConfig';
 import { Avatar } from 'shared/ui/Avatar/Avatar';
-import { getUserAuthData, userActions } from '../../../entities/User';
+import {
+    getUserAuthData, IsUserAdmin, IsUserManager, userActions,
+} from '../../../entities/User';
 import cls from './Navbar.module.scss';
 
 interface NavbarProps {
@@ -32,6 +34,11 @@ export const Navbar = memo(({ className }: NavbarProps) => {
         dispatch(userActions.logout());
     }, [dispatch]);
 
+    const isAdmin = useSelector(IsUserAdmin);
+    const isManager = useSelector(IsUserManager);
+
+    const isAdminPanelAvailable = isAdmin || isManager;
+
     if (authData) {
         return (
             <header className={classNames(cls.Navbar, {}, [className])}>
@@ -39,6 +46,10 @@ export const Navbar = memo(({ className }: NavbarProps) => {
                     direction='bottom left'
                     className={cls.dropdown}
                     items={[
+                        ...(isAdminPanelAvailable ? [{
+                            content: t('Админка'),
+                            href: RoutePath.admin_panel,
+                        }] : []),
                         {
                             content: t('Профиль'),
                             href: RoutePath.profile + authData.id,
