@@ -6,9 +6,9 @@ import { NotFoundPage } from 'pages/NotFoundPage';
 import { ProfilePage } from 'pages/ProfilePage';
 import { useSelector } from 'react-redux';
 import { Navigate, RouteProps } from 'react-router-dom';
-import { getUserAuthData } from 'entities/User';
 import AdminPanelPage from 'pages/AdminPanelPage/ui/AdminPanelPage';
 import ForbiddenPage from 'pages/ForbiddenPage/ui/ForbiddenPage';
+import { getUserAuthData } from '../../../entities/User/model/selectors/getUserAuthData/getUserAuthData';
 import { UserRole } from '../../../entities/User/model/types/user';
 
 export type AppRoutesProps = RouteProps & {
