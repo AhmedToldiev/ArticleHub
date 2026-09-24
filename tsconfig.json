@@ -4,17 +4,23 @@
         "noImplicitAny": true,
         "module": "ESNext",
         "target": "es6",
-        "lib": ["dom", "es2020"],
+        "lib": [
+            "dom",
+            "es2020"
+        ],
         "jsx": "react-jsx",
         "allowJs": true,
         "strict": true,
         "moduleResolution": "node",
         "baseUrl": ".",
         "paths": {
-            "*": ["./src/*"]
+            "*": [
+                "./src/*"
+            ]
         },
         "esModuleInterop": true,
-        "allowSyntheticDefaultImports": true
+        "allowSyntheticDefaultImports": true,
+        "isolatedModules": true
     },
     "ts-node": {
         "compilerOptions": {
