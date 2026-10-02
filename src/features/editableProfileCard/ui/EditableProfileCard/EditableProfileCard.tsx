@@ -4,7 +4,7 @@ import { memo, useCallback } from 'react';
 import { useSelector } from 'react-redux';
 import { Text, TextTheme } from 'widgets/Text/Text';
 import { VStack } from 'shared/ui/Stack';
-import { DynamicModuleLoader, ReducersList } from 'shared/lib/DynamicModuleLoader/DynamicModuleLoader';
+import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch';
 import { useInititalEffect } from 'shared/lib/hooks/useInitialEffect';
 import {
