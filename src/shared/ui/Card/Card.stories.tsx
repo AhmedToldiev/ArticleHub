@@ -1,6 +1,6 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { Text } from 'widgets/Text/Text';
+import { Text } from '@/widgets/Text/Text';
 import { Card } from './Card';
 
 export default {

@@ -1,11 +1,11 @@
-import { classNames } from 'shared/lib/classnames/classNames';
 import { useTranslation } from 'react-i18next';
 import { memo, useCallback } from 'react';
-import { AddCommentForm } from 'features/addCommentForm';
 import { useDispatch, useSelector } from 'react-redux';
-import { VStack } from 'shared/ui/Stack';
-import { Text, TextSize } from 'widgets/Text/Text';
-import { useInititalEffect } from 'shared/lib/hooks/useInitialEffect';
+import { AddCommentForm } from '@/features/addCommentForm';
+import { classNames } from '@/shared/lib/classnames/classNames';
+import { VStack } from '@/shared/ui/Stack';
+import { Text, TextSize } from '@/widgets/Text/Text';
+import { useInititalEffect } from '@/shared/lib/hooks/useInitialEffect';
 import { CommentList } from '../../../../entities/Comment';
 import {
     fetchCommentsByArticleId,

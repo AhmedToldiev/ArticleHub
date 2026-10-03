@@ -1,13 +1,13 @@
-import { AboutPage } from 'pages/AboutPage';
-import { ArticleDetailsPage } from 'pages/ArticleDetailsPage';
-import { ArticlesPage } from 'pages/ArticlesPage';
-import { MainPage } from 'pages/MainPage';
-import { NotFoundPage } from 'pages/NotFoundPage';
-import { ProfilePage } from 'pages/ProfilePage';
 import { useSelector } from 'react-redux';
 import { Navigate, RouteProps } from 'react-router-dom';
-import AdminPanelPage from 'pages/AdminPanelPage/ui/AdminPanelPage';
-import ForbiddenPage from 'pages/ForbiddenPage/ui/ForbiddenPage';
+import { AboutPage } from '@/pages/AboutPage';
+import { ArticleDetailsPage } from '@/pages/ArticleDetailsPage';
+import { ArticlesPage } from '@/pages/ArticlesPage';
+import { MainPage } from '@/pages/MainPage';
+import { NotFoundPage } from '@/pages/NotFoundPage';
+import { ProfilePage } from '@/pages/ProfilePage';
+import AdminPanelPage from '@/pages/AdminPanelPage/ui/AdminPanelPage';
+import ForbiddenPage from '@/pages/ForbiddenPage/ui/ForbiddenPage';
 import { getUserAuthData } from '../../../entities/User/model/selectors/getUserAuthData/getUserAuthData';
 import { UserRole } from '../../../entities/User/model/types/user';
 

@@ -1,19 +1,19 @@
-import { classNames } from 'shared/lib/classnames/classNames';
 import { useTranslation } from 'react-i18next';
 import { memo, useCallback } from 'react';
 
 import { useSelector } from 'react-redux';
-import { Card } from 'shared/ui/Card/Card';
-import { SortOrder } from 'shared/types';
-import { ArticleSortSelector } from 'features/ArticleSortSelector/ArticleSortSelector';
-import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch';
+import { classNames } from '@/shared/lib/classnames/classNames';
+import { Card } from '@/shared/ui/Card/Card';
+import { SortOrder } from '@/shared/types';
+import { ArticleSortSelector } from '@/features/ArticleSortSelector/ArticleSortSelector';
+import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch';
 import {
     getArticlesPageOrder, getArticlesPageSearch, getArticlesPageSort, getArticlesPageType, getArticlesPageView,
-} from 'pages/ArticlesPage/model/selectors/articlesPageSelectors';
-import { articlesPageActions } from 'pages/ArticlesPage/model/slices/articlesPageSlice';
-import { Input } from 'widgets/Input/Input';
-import { fetchArticlesList } from 'pages/ArticlesPage/model/services/fetchArticlesList/fetchArticlesList';
-import { useDebounce } from 'shared/lib/hooks/useDebounce';
+} from '@/pages/ArticlesPage/model/selectors/articlesPageSelectors';
+import { articlesPageActions } from '@/pages/ArticlesPage/model/slices/articlesPageSlice';
+import { Input } from '@/widgets/Input/Input';
+import { fetchArticlesList } from '@/pages/ArticlesPage/model/services/fetchArticlesList/fetchArticlesList';
+import { useDebounce } from '@/shared/lib/hooks/useDebounce';
 import { ArticleTypeTabs } from '../../features/ArticleTypeTabs/ArticleTypeTabs';
 import { ArticleViewSelector } from '../ArticleViewSelector/ArticleViewSelector';
 import { ArticleSortField, ArticleType, ArticleView } from '../../entities/Article/model/types/article';

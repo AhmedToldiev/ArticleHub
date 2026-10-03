@@ -1,15 +1,15 @@
-import { classNames } from 'shared/lib/classnames/classNames';
 import { useTranslation } from 'react-i18next';
 import { memo, useCallback } from 'react';
 import { useSelector } from 'react-redux';
-import { Text, TextTheme } from 'widgets/Text/Text';
-import { VStack } from 'shared/ui/Stack';
-import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
-import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch';
-import { useInititalEffect } from 'shared/lib/hooks/useInitialEffect';
+import { classNames } from '@/shared/lib/classnames/classNames';
+import { Text, TextTheme } from '@/widgets/Text/Text';
+import { VStack } from '@/shared/ui/Stack';
+import { DynamicModuleLoader, ReducersList } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
+import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch';
+import { useInititalEffect } from '@/shared/lib/hooks/useInitialEffect';
 import {
     getProfileError, getProfileForm, getProfileIsLoading, getProfileReadonly, getProfileValidateErrors,
-} from 'features/editableProfileCard/model/selectors/getProfileData';
+} from '@/features/editableProfileCard/model/selectors/getProfileData';
 import { ProfileCard } from '../../../../entities/Profile/ui/ProfileCard/ProfileCard';
 import { Country } from '../../../../entities/Country/model/types/country';
 import { Currency } from '../../../../entities/Currency/model/types/currency';

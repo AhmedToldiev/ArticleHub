@@ -4,13 +4,13 @@
     bottom: 0;
     right: 0;
     left: 0;
-    z-index: 100;
+    z-index: var(--overlay-z-index);
     display: flex;
     align-items: flex-end;
 }
 
 .sheet {
-    z-index: 100;
+    z-index: var(--overlay-z-index);
     position: fixed;
     left: 2vw;
     height: calc(100vh + 100px);

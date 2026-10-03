@@ -1,8 +1,8 @@
 import React, { Suspense } from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { StoreDecorator } from 'shared/config/storybook/decorators/StoreDecorator';
-import { SortOrder } from 'shared/types';
+import { StoreDecorator } from '@/shared/config/storybook/decorators/StoreDecorator';
+import { SortOrder } from '@/shared/types';
 import { ArticleView, ArticleSortField, ArticleType } from '../../entities/Article/model/types/article';
 import { ArticlesPageFilters } from './ArticlesPageFilters';
 

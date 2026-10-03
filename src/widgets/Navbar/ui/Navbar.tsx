@@ -1,16 +1,16 @@
 /* eslint-disable i18next/no-literal-string */
-import { classNames } from 'shared/lib/classnames/classNames';
 import { useTranslation } from 'react-i18next';
-import { Button, ButtonTheme } from 'widgets/Button/Button';
 import { memo, useCallback, useState } from 'react';
-import { LoginModal } from 'features/AuthByUsername';
-import { RoutePath } from 'shared/config/routeConfig/routerConfig';
-import { Text, TextTheme } from 'widgets/Text/Text';
-import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink';
-import { HStack } from 'shared/ui/Stack/HStack/HStack';
 import { useSelector } from 'react-redux';
-import { AvatarDropdown } from 'features/avatarDropdown';
-import { NotificationButton } from 'features/notificationButton';
+import { classNames } from '@/shared/lib/classnames/classNames';
+import { Button, ButtonTheme } from '@/widgets/Button/Button';
+import { LoginModal } from '@/features/AuthByUsername';
+import { RoutePath } from '@/shared/config/routeConfig/routerConfig';
+import { Text, TextTheme } from '@/widgets/Text/Text';
+import { AppLink, AppLinkTheme } from '@/shared/ui/AppLink/AppLink';
+import { HStack } from '@/shared/ui/Stack/HStack/HStack';
+import { AvatarDropdown } from '@/features/avatarDropdown';
+import { NotificationButton } from '@/features/notificationButton';
 import cls from './Navbar.module.scss';
 import {
     getUserAuthData,
